@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Test1</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+    <header id="headerbar">
+        <div class="title-bar">
+            <div class="head-left">
+                <!--<a href="test.html"> --><img src="assets/file.png" alt="logo" id="logo"></a>
+                <h1 class="company-title lato-bold">Something Little Special</h1>
+                <input type="text" name="searchbar" id="searchbar" placeholder="Search...">
+            </div>
+            <div class="head-right">
+                <button class="icon-button" onclick="window.location.href='h'"><img src="assets/wishlist.png" alt=""
+                        class="large-icon" title="View Wishlist"></button>
+                <button class="icon-button" onclick="window.location.href='h'"><img src="assets/shopping-cart.png"
+                        alt="" class="large-icon" title="View Cart"></button>
+                <div class="acc-dropdown">
+                    <button class="icon-button"><img src="assets/account.png" alt="" class="large-icon"></button>
+                    <div class="acc-dropdown-content">
+                        <button onclick="document.getElementById('cloginform').style.display='block'">Customer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-container" id="cloginform">
+            <div class="center animate">
+                <div class="login-title">
+                    <h2>Login</h2>
+                </div>
+                <div class="formpage">
+                    <form action="" method="post" class="lato-regular">
+                        <div class="btn">
+                            <button type="submit" id="g-login"><img src="assets/google-icon.png" alt=""
+                                    id="google-logo">Continue with Google</button>
+                            <button type="button" onclick="closePopup()" class="cancelbtn">Cancel</button>
+                        </div>
+                    </form>
+                    <!-- <div class="signup-redirect lato-regular">New user? Click here to <a
+                            onclick="document.getElementById('csignupform').style.display='block'; document.getElementById('cloginform').style.display='none'"
+                            id="signup-anchor">sign up</a></div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="modal-container" id="csignupform">
+            <div class="center animate" id="csignupformpage">
+                <div class="signup-title">
+                    <h2>Customer Signup</h2>
+                </div>
+                <div class="formpage lato-regular">
+                    <form action="" onsubmit="return validateForm()" method="post">
+                        <div class="creds">
+                            <div class="signup-name">
+                                <div class="signup-col1">
+                                    <label for="fname">First Name</label>
+                                    <input class="signup-input" type="text" name="fname" id="fname">
+                                </div>
+                                <div class="signup-col2">
+                                    <label for="lname">Last Name</label>
+                                    <input class="signup-input" type="text" name="lname" id="lname">
+                                </div>
+                            </div>
+                            <div class="signup-dob">
+                                <label for="dob">Date of Birth</label>
+                                <input class="signup-input" type="date" name="dob" id="dob">
+                            </div>
+                            <div class="signup-contacts">
+                                <div class="signup-col1">
+                                    <label for="mobile">Mobile Number</label>
+                                    <input class="signup-input" type="tel" name="mobile" id="mobile">
+                                </div>
+                                <div class="signup-col2">
+                                    <label for="email">Email ID</label>
+                                    <input class="signup-input" type="email" name="email" id="email">
+                                </div>
+                            </div>
+                            <div class="signup-password">
+                                <label for="signup-password1">Enter a Password</label>
+                                <input class="signup-input" type="password" name="signup-password1" id="signup-password1">
+                                <label for="signup-password2">Confirm your Password</label>
+                                <input class="signup-input" type="password" name="signup-password2" id="signup-password2">
+                                <p id="password-match-message">Passwords do not match</p>
+                            </div>
+                        </div>
+                        
+                        <div class="btn">
+                            <button type="submit" id="c-signup">Generate OTP</button>
+                            <button type="button" onclick="document.getElementById('csignupform').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+    </header>
+
+    <div class="empty-bar"></div> <!-- This needs to be removed by adjusting vertical margins of below elements -->
+
+
+    <div class="container lato">
+        <div class="order-list-row">
+            <div class="item-count-row lato">
+                <span id="item-count">Your Cart (2)</span>
+                <!-- <hr> -->
+            </div>
+            <div class="horizontal-rule"></div>
+            <div class="order-item-card">
+                <div class="item-image">
+                    <img src="assets/flower_preservation.jpg" alt="" width="150px">
+                </div>
+                <div class="item-description">
+                    <div class="item-name">
+                        Item 1
+                    </div>
+                    <div class="rate-details">
+                        <div class="item-rate">
+                            Rate
+                        </div>
+                        <div class="custom-charges">
+                            Custom-Charges:
+                        </div>
+                        <div class="offer-details">
+                            Offers Applicable
+                        </div>
+                    </div>
+                    <div class="custom-details">
+                        <div class="custom-options">
+                            Customizable / Non-Customizable
+                        </div>
+                        <div class="custom-instruction">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde recusandae cumque nostrum
+                            esse nesciunt ex assumenda vitae voluptate culpa?
+                            magni.
+                        </div>
+                    </div>
+                    <div class="item-quantity">
+                        <div class="item-quantity-control">
+                            <button class="quantity-control quantity-minus">-</button>
+                            <input type="number" name="" id="" class="quantity-control-field" readonly>
+                            <button class="quantity-control quantity-plus">+</button>
+                        </div>
+                        <div class="item-remove">
+                            <button class="remove-item-button"><img src="assets/delete-icon.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-price">
+                    Price
+                </div>
+            </div>
+
+            <div class="order-item-card">
+                <div class="item-image">
+                    <img src="assets/flower_preservation.jpg" alt="" width="150px">
+                </div>
+                <div class="item-description">
+                    <div class="item-name">
+                        Item 1
+                    </div>
+                    <div class="rate-details">
+                        <div class="item-rate">
+                            Rate
+                        </div>
+                        <div class="custom-charges">
+                            Custom-Charges:
+                        </div>
+                        <div class="offer-details">
+                            Offers Applicable
+                        </div>
+                    </div>
+                    <div class="custom-details">
+                        <div class="custom-options">
+                            Customizable / Non-Customizable
+                        </div>
+                        <div class="custom-instruction">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde recusandae cumque nostrum
+                            esse nesciunt ex assumenda vitae voluptate culpa?
+                            magni.
+                        </div>
+                    </div>
+                    <div class="item-quantity">
+                        <div class="item-quantity-control">
+                            <button class="quantity-control quantity-minus">-</button>
+                            <input type="number" name="" id="" class="quantity-control-field" readonly>
+                            <button class="quantity-control quantity-plus">+</button>
+                        </div>
+                        <div class="item-remove">
+                            <button class="remove-item-button"><img src="assets/delete-icon.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-price">
+                    Price
+                </div>
+            </div>
+
+            <div class="order-item-card">
+                <div class="item-image">
+                    <img src="assets/flower_preservation.jpg" alt="" width="150px">
+                </div>
+                <div class="item-description">
+                    <div class="item-name">
+                        Item 1
+                    </div>
+                    <div class="rate-details">
+                        <div class="item-rate">
+                            Rate
+                        </div>
+                        <div class="custom-charges">
+                            Custom-Charges:
+                        </div>
+                        <div class="offer-details">
+                            Offers Applicable
+                        </div>
+                    </div>
+                    <div class="custom-details">
+                        <div class="custom-options">
+                            Customizable / Non-Customizable
+                        </div>
+                        <div class="custom-instruction">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde recusandae cumque nostrum
+                            esse nesciunt ex assumenda vitae voluptate culpa?
+                            magni.
+                        </div>
+                    </div>
+                    <div class="item-quantity">
+                        <div class="item-quantity-control">
+                            <button class="quantity-control quantity-minus">-</button>
+                            <input type="number" name="" id="" class="quantity-control-field" readonly>
+                            <button class="quantity-control quantity-plus">+</button>
+                        </div>
+                        <div class="item-remove">
+                            <button class="remove-item-button"><img src="assets/delete-icon.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-price">
+                    Price
+                </div>
+            </div>
+        </div>
+
+        <div class="order-summary-box">
+            <div class="summary-title-box">
+                <p>Summary</p>
+            </div>
+            <form action="">
+                <div class="price-summary">
+                    <div class="price-entry">
+                        <label for="subtotal-field">Sub-Total:</label>
+                        <input type="number" name="sub-total" id="subtotal-field" readonly value="1000">
+                    </div>
+                    <div class="price-entry">
+                        <label for="custom-charge-field">Custom Fees:</label>
+                        <input type="number" name="custom-charge" id="custom-charge-field" readonly value="100">
+                    </div>
+                    <div class="price-entry">
+                        <label for="discount-field">Discount:</label>
+                        <input type="number" name="discount-charge" id="discount-field" readonly value="-100">
+                    </div>
+                    <div class="price-entry">
+                        <label for="tax-field">Tax:</label>
+                        <input type="number" name="tax-charge" id="tax-field" readonly value="100">
+                    </div>
+                    <div class="price-entry">
+                        <label for="delivery-charge-field">Delivery Charges:</label>
+                        <input type="number" name="delivery-charge" id="delivery-charge-field" readonly value="100">
+                    </div>
+                    <div class="total-price-entry">
+                        <label for="total-price-field">Total:</label>
+                        <input type="number" name="total-price" id="total-price-field" readonly value="1200">
+                    </div>
+                </div>
+                <div class="address-field">
+                    <label for="shipping-address-field">Shipping Address:</label>
+                    <textarea name="shipping-address" id="shipping-address-field" placeholder="Enter your Shipping Address" rows="6"></textarea>
+                </div>
+                <div class="cart-button">
+                    <button id="checkout-button">Checkout <img src="assets/checkout-icon.png" alt=""></button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+    //Modal Script (Popup)
+    window.onclick = function (event) {
+        var cloginModal = document.getElementById('cloginform');
+        var aloginModal = document.getElementById('aloginform');
+        var aloginModal = document.getElementById('csignupform');
+        if (event.target == cloginModal) {
+            cloginModal.style.display = "none";
+        } else if (event.target == aloginModal) {
+            aloginModal.style.display = "none";
+        }
+    }
+
+    // Function to show the popup only on the first visit in the current session
+    window.onload = function () {
+        setTimeout(function () {
+            if (!sessionStorage.getItem('popupShown')) {
+                // Show the popup if it hasn't been shown in this session
+                document.getElementById("cloginform").style.display = "block";
+            }
+        }, 2000); // Delay of 2000 milliseconds (2 seconds)
+    };
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("cloginform").style.display = "none";
+        // Set a flag in sessionStorage to prevent the popup from showing again in this session
+        sessionStorage.setItem('popupShown', 'true');
+    }
+
+
+    //Signup Password Validation script
+    function validateForm() {
+        var password1 = document.getElementById("signup-password1").value;
+        var password2 = document.getElementById("signup-password2").value;
+
+        if (password1 !== password2) {
+            // Passwords do not match, show error message
+            document.getElementById("password-match-message").style.display = "block";
+            return false; // Prevent form submission
+        } else {
+            // Passwords match, hide error message
+            document.getElementById("password-match-message").style.display = "none";
+            return true; // Allow form submission
+        }
+    }
+
+    //Script for quantity control
+    const incButtons = document.getElementsByClassName("quantity-plus");
+    const decButtons = document.getElementsByClassName("quantity-minus");
+    const inputFields = document.getElementsByClassName("quantity-control-field");
+
+    // Loop through each set of buttons and input fields
+    for (let i = 0; i < incButtons.length; i++) {
+        let counter = 1; // Initialize counter to 1
+
+        // Set the initial value of the input field to 1
+        inputFields[i].value = counter;
+
+        incButtons[i].addEventListener("click", () => {
+            counter++;
+            inputFields[i].value = counter;
+        });
+
+        decButtons[i].addEventListener("click", () => {
+            if (counter > 1) {  // Ensure the counter does not go below 1
+                counter--;
+            }
+            inputFields[i].value = counter;
+        });
+    }
+
+
+</script>
+
+
+<!-- <script src="js/nav_scroll.js"></script> -->
+
+</html>
