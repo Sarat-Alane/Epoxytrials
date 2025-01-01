@@ -1,0 +1,150 @@
+/*html, body {
+    padding: 0;
+    margin: 0;
+} */
+
+
+/* Footer Styles Start */
+
+footer {
+    width: 100%;
+    height: fit-content;
+    background-color: #303030;
+    color: white;
+    margin-top: 40px;
+
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-row > * {
+    width: 20%;
+    /* border: 2px solid yellow; */
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 1.25rem;
+}
+
+.footer-list {
+    margin: 12px 20px;
+}
+
+.footer-list a {
+    display: block;
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+    margin: 8px 0px;
+    cursor: pointer;
+}
+
+.footer-list a:visited {
+    color: rgb(192, 192, 192);
+}
+
+.socials-box {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.socials-icon {
+    width: 40px;
+    margin-right: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-text {
+    margin: 0px 4px;
+}
+
+.copyright-bar {
+    font-size: 0.75rem;
+    /* height: fit-content; */
+    text-align: center;
+    padding: 8px 0px;
+}
+
+
+/* Footer Styles End */
+
+
+/* Responsive Styles Start */
+
+
+@media (max-width: 550px) {
+    /* Foooter Styles Start */
+
+    .footer-row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-section {
+        width: 80%;
+        margin: 20px auto 0px auto;
+    }
+
+    .about-us-box, .customer-care-box {
+        display: flex;
+    }
+
+    .about-us-box a, .customer-care-box a {
+        margin-right: 32px;
+    }
+
+    .socials-icon {
+        width: 32px;
+    }
+
+
+    /* Foooter Styles End */
+
+}
+
+@media (min-width:551px) and (max-width:1000px) {
+    .footer-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .footer-section {
+        width: 30%;
+        margin: 16px 12px;
+    }
+
+    .about-us-box, .customer-care-box {
+        display: flex;
+    }
+
+    .about-us-box a, .customer-care-box a {
+        margin-right: 20px;
+    }
+
+    .socials-icon {
+        width: 32px;
+    }
+
+    .contacts-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* Responsive Styles End */
+
